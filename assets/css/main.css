@@ -3090,5 +3090,36 @@
 	}
 
 .speaker {
+	display: flex;
+	align-items: center;
+	gap: 1.5em;
 	margin-bottom: 20px;
+}
+
+.speaker > .image {
+	border-radius: 50%;
+	flex: 0 0 120px;
+	height: 120px;
+	object-fit: cover;
+	width: 120px;
+}
+
+.speaker .inner {
+	flex: 1;
+}
+
+.speaker .inner p:last-child {
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+	.speaker {
+		align-items: flex-start;
+	}
+
+	.speaker > .image {
+		flex-basis: 88px;
+		height: 88px;
+		width: 88px;
+	}
 }
